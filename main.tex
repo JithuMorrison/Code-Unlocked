@@ -1,0 +1,714 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.1.1 (14/2/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[openany]{book} % Default font size and left-justified equations
+
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate [below=12cm] (midpoint) at (current page.north);
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{background}}; % Background image
+\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Code Unlocked\\[15pt] % Book title
+{\Large Unveiling the Future of Computing:\\ A Comprehensive Guide to Modern Technologies}\\[20pt] % Subtitle
+{\huge Jithu Morrison S}}}; % Author name
+\end{tikzpicture}};
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright \copyright\ 2024 Jithu Morrison S\\ % Copyright notice
+
+\noindent \textsc{Published by Me}\\ % Publisher
+
+\noindent \textsc{www.jithumorrison.github.io}\\ % URL
+
+\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ 
+
+Dive into the ever-evolving world of computer science. This book covers the fundamentals and innovations shaping the tech landscape, from artificial intelligence and data science to software development and cybersecurity. Designed for learners and professionals alike, it offers clear explanations, real-world applications, and insights into emerging trends, equipping you to thrive in the digital age.\\% License information
+
+\noindent \textit{First printing, March 2013} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	PROGRAMMING LANGUAGES
+%----------------------------------------------------------------------------------------
+
+\part{Programming Languages}
+
+\chapterimage{chapter_head_2.pdf}
+
+\chapter{Programming Languages Overview}
+
+\section{What is Programming Language?}\index{Paragraphs of Text}
+
+Programming languages are tools that developers use to communicate with computers. Each language has its own syntax, rules, and paradigms that determine how programs are written and executed.
+
+%------------------------------------------------
+
+\section{Types of programming language}\index{Lists!Numbered List}
+
+\begin{enumerate}
+\item Procedural Programming
+\item Object-Oriented Programming
+\item Functional Programming
+\item Scripting Languages
+\item Domain-Specific Languages
+\end{enumerate}
+
+\section{Procedural Programming}\index{Procedural Programming}
+Focuses on procedures or routines (e.g., C, Python).
+\subsection{C}\index{C}
+\begin{itemize}
+\item Overview: One of the oldest and most influential programming languages, C is a general-purpose language that provides low-level access to memory and system processes.
+\item Use Cases: Systems programming (operating systems, embedded systems), game development, compilers.
+\item Strengths: Fast execution, fine-grained control over hardware, portability.
+\item Paradigm: Procedural programming.
+\item Notable Features: Pointers, manual memory management, close-to-hardware programming.
+\end{itemize}
+
+\subsection{Go (Golang)}\index{Go}
+\begin{itemize}
+\item Overview: Go is an open-source programming language designed for system-level programming and efficient concurrency, created by Google.
+\item Use Cases: Cloud infrastructure, server-side programming, microservices, web servers, CLI tools.
+\item Strengths: Concurrency model (goroutines), fast execution, simple syntax, scalability.
+\item Paradigm: Procedural programming with strong support for concurrency.
+\item Notable Features: Goroutines, fast compilation, garbage collection, static typing.
+\end{itemize}
+
+\section{Object-Oriented Programming (OOP)}\index{Object-Oriented Programming}
+Focuses on objects (data structures) and their interactions (e.g., Java, C++, C\#).
+\subsection{Java}\index{Java}
+\begin{itemize}
+\item Overview: Java is an object-oriented, high-level programming language known for its "write once, run anywhere" capability, thanks to the Java Virtual Machine (JVM).
+\item Use Cases: Enterprise applications, mobile apps (Android), web servers, cloud-based systems.
+\item Strengths: Platform independence, large ecosystem, strong memory management (garbage collection).
+\item Paradigm: Object-oriented programming.
+\item Notable Features: Platform-independent bytecode, multithreading, strong typing, automatic garbage collection.
+\end{itemize}
+
+\subsection{C\#}\index{C\#}
+\begin{itemize}
+\item Overview: Developed by Microsoft, C\# is a modern, object-oriented programming language commonly used in game development and building Windows applications.
+\item Use Cases: Game development (Unity), desktop applications, enterprise software, mobile apps (Xamarin).
+\item Strengths: Modern language features (LINQ, async/await), integration with Microsoft technologies, versatile.
+\item Paradigm: Object-oriented programming.
+\item Notable Features: Automatic garbage collection, strong typing, multithreading, event-driven programming.
+\end{itemize}
+
+\subsection{Ruby}\index{Ruby}
+\begin{itemize}
+\item Overview: Ruby is a dynamic, interpreted, high-level language known for its simplicity and productivity, particularly popular in web development via Ruby on Rails.
+\item Use Cases: Web development, scripting, automation, DevOps (Chef).
+\item Strengths: Elegant syntax, fast development, dynamic typing, highly supportive community.
+\item Paradigm: Object-oriented programming.
+\item Notable Features: Everything is an object, flexible and dynamic, built-in metaprogramming.
+\end{itemize}
+
+\subsection{Dart}\index{Dart}
+\begin{itemize}
+\item Overview: Dart is an open-source language developed by Google, known for its use in Flutter to create cross-platform mobile applications.
+\item Use Cases: Mobile app development (Flutter), web apps, server-side programming.
+\item Strengths: Efficient cross-platform app development, reactive programming (streams), fast.
+\item Paradigm: Object-oriented and reactive programming
+\item Notable Features: Just-in-time (JIT) and ahead-of-time (AOT) compilation, strong typing, async/await support.
+\end{itemize}
+
+\section{Functional Programming}\index{Functional Programming}
+Treats computation as the evaluation of mathematical functions, avoiding changing-state and mutable data (e.g., Haskell, Scala, Lisp).
+\subsection{Haskell}\index{Haskell}
+\begin{itemize}
+\item Overview: Haskell is a purely functional programming language with strong static typing and lazy evaluation. It is known for its expressive type system and mathematical precision.
+\item Use Cases: Academic research, financial systems, compilers, concurrent and distributed systems.
+\item Strengths: Pure functions, immutability, strong typing, concise and expressive code.
+\item Paradigm: Purely functional programming.
+\item Notable Features: Lazy evaluation, Type inference, Immutability, Monads
+\end{itemize}
+
+\section{Declarative Programming}\index{Declarative Programming}
+Focuses on what the program should accomplish rather than how (e.g., SQL, Prolog).
+\subsection{SQL}\index{SQL}
+\begin{itemize}
+\item Overview: SQL (Structured Query Language) is a domain-specific language used for managing and querying relational databases.
+\item Use Cases: Database management, data analysis, back-end development.
+\item Strengths: Easy to learn, efficient for querying large datasets, standardized.
+\item Paradigm: Declarative programming.
+\item Notable Features: Queries (SELECT, INSERT, UPDATE), transactions, joins, indexing.
+\end{itemize}
+
+\section{Hybrid Programming}\index{Hybrid Programming}
+Focuses on procedures or routines (e.g., C, Python).
+\subsection{C++}\index{C++}
+\begin{itemize}
+\item Overview: C++ is an extension of C that incorporates object-oriented programming features while retaining the efficiency of C.
+\item Use Cases: Game engines, high-performance applications, desktop applications, systems programming.
+\item Strengths: Supports both low-level and high-level programming, efficient performance, large libraries.
+\item Paradigm: Multi-paradigm (supports procedural, object-oriented, and generic programming).
+\item Notable Features: Classes, inheritance, polymorphism, templates, RAII (Resource Acquisition Is Initialization).
+\end{itemize}
+
+\subsection{Python}\index{Python}
+\begin{itemize}
+\item Overview: Python is a versatile, high-level programming language known for its simplicity and readability, making it popular among beginners and experts alike.
+\item Use Cases: Web development (Django, Flask), data science, AI/ML, scripting, automation.
+\item Strengths: Simple and clean syntax, vast libraries, cross-platform support, fast development cycles.
+\item Paradigm: Multi-paradigm (supports procedural, object-oriented, and functional programming).
+\item Notable Features: Interpreted, dynamic typing, extensive standard libraries (e.g., NumPy, TensorFlow), easy integration with other languages (C, C++).
+\end{itemize}
+
+\subsection{JavaScript}\index{JavaScript}
+\begin{itemize}
+\item Overview: JavaScript is the scripting language of the web, primarily used for interactive front-end development but also popular in backend development through Node.js.
+\item Use Cases: Web applications, server-side programming (Node.js), mobile apps (React Native), game development.
+\item Strengths: Ubiquity in browsers, asynchronous capabilities (event-driven), large community and libraries.
+\item Paradigm: Multi-paradigm (supports procedural, object-oriented, and functional programming).
+\item Notable Features: First-class functions, closures, event-driven programming, lightweight execution.
+\end{itemize}
+
+\subsection{Swift}\index{Swift}
+\begin{itemize}
+\item Overview: Swift is a powerful, intuitive language created by Apple for iOS, macOS, watchOS, and tvOS development.
+\item Use Cases: iOS and macOS applications, Apple Watch and Apple TV apps.
+\item Strengths: Fast performance, safety features (null safety, error handling), modern syntax.
+\item Paradigm: Multi-paradigm (supports object-oriented and functional programming).
+\item Notable Features: Optional types, type inference, closures, protocol-oriented programming.
+\end{itemize}
+
+\subsection{Kotlin}\index{Kotlin}
+\begin{itemize}
+\item Overview: Kotlin is a modern programming language designed to fully interoperate with Java, and it has become the preferred language for Android development.
+\item Use Cases: Android apps, server-side applications, full-stack web development.
+\item Strengths: Concise syntax, null safety, full Java compatibility, good for modern Android app development.
+\item Paradigm: Multi-paradigm (supports object-oriented and functional programming).
+\item Notable Features: Null safety, extension functions, coroutines for asynchronous programming.
+\end{itemize}
+
+\subsection{PHP}\index{PHP}
+\begin{itemize}
+\item Overview: PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language.
+\item Use Cases: Dynamic web pages, content management systems (CMS), e-commerce platforms (WordPress, Drupal).
+\item Strengths: Easy integration with HTML, large ecosystem for web development, good for rapid development.
+\item Paradigm: Multi-paradigm (procedural, object-oriented).
+\item Notable Features: Server-side execution, simple syntax, strong support for databases.
+\end{itemize}
+
+\subsection{Rust}\index{Rust}
+\begin{itemize}
+\item Overview: Rust is a systems programming language focused on safety and performance, particularly in the area of memory management.
+\item Use Cases: Systems programming, embedded systems, web assembly, game engines.
+\item Strengths: Memory safety without a garbage collector, concurrency without data races, high performance.
+\item Paradigm: Multi-paradigm (supports functional and imperative programming).
+\item Notable Features: Ownership model, zero-cost abstractions, safe concurrency, pattern matching.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	DATABASE
+%----------------------------------------------------------------------------------------
+
+\part{Database Systems}
+
+\chapterimage{chapter_head_1.pdf} % Chapter heading image
+
+\chapter{Database}
+\section{Database System}
+A database system is a structured collection of data stored and managed in a way that allows efficient access, retrieval, modification, and management. It consists of two main components: the database (the collection of data) and the Database Management System (DBMS) (the software that handles the database).
+\section{Key Concepts}\index{Key Concepts}
+
+\begin{itemize}
+\item Database: A database is an organized collection of data. It stores data in tables or structures such as records, objects, or key-value pairs, allowing efficient access and management.
+\item DBMS: A Database Management System (DBMS) is software that provides an interface for users and applications to interact with the database. It handles the organization, storage, retrieval, and updating of data.
+\item Data Models: Databases use specific models to define how data is stored, accessed, and manipulated. The most common models are:
+\end{itemize}
+\subsection{Data Models}\index{Data Models}
+
+\begin{itemize}
+\item Relational Model: Data is organized into tables (relations) and accessed using Structured Query Language (SQL). Each table consists of rows and columns. Most popular databases (e.g., MySQL, PostgreSQL) use this model.
+\item NoSQL Model: Non-relational databases that store data in various formats such as key-value pairs, documents, wide-column stores, or graphs. These are used for scalability and performance, particularly in big data or distributed systems.
+\item Hierarchical Model: Data is organized in a tree-like structure, with parent-child relationships. Used less frequently today.
+\item Network Model: Similar to the hierarchical model but allows more complex relationships through graph structures. This model is used in graph databases.
+\end{itemize}
+\section{Types of Databases}\index{Types of Databases}
+\begin{itemize}
+\item Relational Databases (RDBMS)
+\item NoSQL Databases
+\item Cloud Databases
+\item In-Memory Databases
+\item Distributed Databases
+\item Graph Databases
+\end{itemize}
+
+\subsection{Components of DBMS}\index{Components of DBMS}
+
+\begin{itemize}
+\item Database Engine: Core component that handles the storage, retrieval, and management of data. It also ensures that all data is stored securely and efficiently.
+\item Query Processor: Interprets and executes database queries (usually written in SQL). It optimizes query performance by choosing the best way to access data.
+\item Transaction Manager: Manages the execution of transactions, ensuring that the database maintains consistency, especially during concurrent access and potential failures.
+\item Concurrency Control: Manages access to the database when multiple users are interacting with it simultaneously, ensuring data integrity.
+\item Backup and Recovery: Ensures that the database can recover from system failures by maintaining backups and recovery mechanisms.
+\item Security Manager: Controls access to the database, enforcing policies to protect data through authentication, authorization, and encryption.
+\end{itemize}
+
+\section{Transactions}\index{Transactions}
+A transaction is a sequence of operations performed as a single logical unit of work. For example, transferring money from one bank account to another requires multiple operations, but the entire process is treated as one transaction. ACID Properties ensure the reliability of transactions
+\subsection{ACID}
+\begin{enumerate}
+\item Atomicity: All operations within a transaction are treated as a single unit. Either all operations complete, or none do.
+\item Consistency: The database must always transition from one valid state to another, maintaining integrity constraints.
+\item Isolation: Transactions are executed independently, ensuring that they do not interfere with each other.
+\item Durability: Once a transaction is committed, its effects are permanent, even in the event of a system crash.
+\end{enumerate}
+
+\section{SQL (Structured Query Language)}\index{SQL (Structured Query Language)}
+SQL is the standard language used for managing and manipulating relational databases.
+\subsection{SQL commands}\index{SQL commands}
+
+\begin{enumerate}
+\item Data Definition Language (DDL): Defines the database schema (structure).
+\begin{enumerate}
+\item CREATE: Create tables or databases.
+\item ALTER: Modify the structure of tables.
+\item DROP: Delete tables or databases.
+\end{enumerate}
+\item Data Manipulation Language (DML): Manipulates the data stored in the database.
+\begin{enumerate}
+\item SELECT: Retrieve data from the database.
+\item INSERT: Add new data to the database.
+\item UPDATE: Modify existing data.
+\item DELETE: Remove data from the database.
+\end{enumerate}
+\item Data Control Language (DCL): Manages user permissions.
+\begin{enumerate}
+\item GRANT: Give permissions to users.
+\item REVOKE: Remove permissions from users.
+\end{enumerate}
+\item Transaction Control Language (TCL): Manages transactions within the database.
+\begin{enumerate}
+\item COMMIT: Save the changes made by a transaction.
+\item ROLLBACK: Undo the changes made by a transaction.
+\end{enumerate}
+\end{enumerate}
+
+\section{Database Normalization}
+Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. This is done by dividing larger tables into smaller, more manageable tables and defining relationships between them.
+\begin{enumerate}
+    \item 1NF (First Normal Form): Eliminate duplicate columns and ensure each field contains only atomic values.
+    \item 2NF (Second Normal Form): Remove subsets of data that apply to multiple rows and place them in separate tables.
+    \item 3NF (Third Normal Form): Remove columns that are not dependent on the primary key.
+\end{enumerate}
+
+\section{Indexing}
+Indexes are data structures that improve the speed of data retrieval operations on a database table by providing quick lookups. While they speed up SELECT queries, they can slow down INSERT and UPDATE operations due to the overhead of maintaining the index.
+
+\section{Backup and Recovery}
+Backup and recovery mechanisms ensure that database data can be restored in the event of data loss, system crashes, or corruption. Databases support full, incremental, and differential backups, depending on the frequency and data protection needs.
+
+\section{Scaling Databases}
+\begin{enumerate}
+    \item Vertical Scaling (Scaling Up): Adding more resources (CPU, RAM, etc.) to a single server. Limited by the capacity of the hardware.
+    \item Horizontal Scaling (Scaling Out): Adding more servers to distribute the load. Often used with distributed databases to handle large amounts of data and traffic.
+\end{enumerate}
+
+\chapter{Relational Database}
+\section{Relational Database (RDBMS)}
+A Relational Database Management System (RDBMS) is a type of database management system that stores data in tables, which are composed of rows and columns. Each table represents a relation, and relationships between tables are established through primary keys and foreign keys. Data in an RDBMS is managed using Structured Query Language (SQL), a standard language for interacting with relational databases.
+\begin{enumerate}
+    \item Table: A table (relation) is a collection of data organized in rows and columns. Each row represents a record, and each column represents an attribute.
+    \item Primary Key: A column (or set of columns) that uniquely identifies each record in a table.
+    \item Foreign Key: A column (or set of columns) that creates a link between two tables. The foreign key in one table refers to the primary key in another table.
+\end{enumerate}
+\subsection{Oracle Database}
+Oracle is one of the most powerful and feature-rich RDBMSs. It's widely used in large enterprises for mission-critical applications due to its scalability, performance, and security.
+Use Cases: Large-scale enterprise systems, complex applications with high transaction volumes, and organizations requiring extensive customization and optimization.
+\subsection{MySQL}
+MySQL is an open-source RDBMS, widely known for its ease of use, speed, and flexibility. It is often used in web applications, especially in combination with PHP (LAMP stack).
+Use Cases: Web applications, content management systems, data warehouses, and e-commerce platforms.
+\subsection{PostgreSQL}
+PostgreSQL is a highly advanced open-source RDBMS with strong support for SQL compliance, extensibility, and a rich feature set. It is known for its reliability and data integrity.
+Use Cases: Financial systems, data analysis, GIS applications, and multi-purpose enterprise applications.
+\subsection{Microsoft SQL Server}
+SQL Server is Microsoft's enterprise-grade RDBMS with a strong integration with the Microsoft ecosystem. It is known for its ease of use, security, and built-in business intelligence tools.
+Use Cases: Business-critical applications, data warehousing, business intelligence, and enterprise applications in Windows environments.
+\subsection{SQLite}
+SQLite is a lightweight, file-based RDBMS that is embedded within applications. It is serverless and designed to be self-contained, making it ideal for smaller applications.
+Use Cases: Mobile apps, IoT devices, small-scale desktop applications, prototyping, and file-based applications.
+\subsection{MariaDB}
+MariaDB is a fork of MySQL, created by the original MySQL developers. It is fully compatible with MySQL but offers additional features and enhanced performance.
+Use Cases: Web applications, data warehousing, and distributed systems.
+\subsection{IBM Db2}
+IBM Db2 is a robust and scalable RDBMS designed for large enterprise workloads. It offers advanced features for big data, analytics, and AI integration.
+Use Cases: Large enterprises, analytics-driven applications, and hybrid cloud environments.
+\subsection{Amazon Aurora}
+Amazon Aurora is a cloud-native RDBMS developed by AWS. It is fully compatible with MySQL and PostgreSQL but offers performance improvements and scalability for cloud-based applications.
+Use Cases: Cloud-native applications, web-scale applications, and SaaS platforms.
+\subsection{SAP HANA}
+SAP HANA is an in-memory RDBMS designed for real-time analytics and high-speed transactional processing. It is widely used in large-scale ERP (Enterprise Resource Planning) systems.
+Use Cases: Enterprise resource planning (ERP), supply chain management, real-time analytics, and big data applications.
+\subsection{CockroachDB}
+CockroachDB is a distributed SQL database designed for high availability, horizontal scaling, and strong consistency, making it ideal for cloud-native applications.
+Use Cases: Distributed cloud applications, high-availability systems, and globally distributed data architectures.
+\subsection{Firebird}
+Firebird is an open-source RDBMS known for its lightweight footprint, making it suitable for embedded systems as well as enterprise environments.
+Use Cases: Embedded systems, enterprise applications with moderate data processing needs.
+\subsection{Teradata}
+Teradata is an enterprise RDBMS known for handling large-scale data warehouses. It is designed for analytics and data mining.
+Use Cases: Large-scale data warehouses, real-time analytics, business intelligence, and machine learning.
+\subsection{Snowflake}
+Snowflake is a cloud-native data warehousing solution that uses a unique architecture to decouple storage and compute, offering scalability and flexibility for analytics.
+Use Cases: Cloud-based data warehousing, real-time analytics, big data processing.
+
+
+\section{SQL (Structured Query Language) in RDBMS}
+SQL is the standard language used to interact with relational databases. SQL commands are classified into different types based on their functionality.
+
+%----------------------------------------------------------------------------------------
+%	OPERATING SYSTEM
+%----------------------------------------------------------------------------------------
+
+\part {Operating Systems}
+
+\chapter{Operating Systems Overview}
+
+Operating Systems manage hardware and software. They act as a bridge between users and machines.
+
+\section{Purpose of an OS}
+\begin{itemize}
+    \item \textbf{Resource Management:} Allocates and deallocates CPU, memory, storage, and I/O devices.
+    \item \textbf{Process Management:} Creates, schedules, and terminates processes.
+    \item \textbf{File System Management:} Manages files and directories on storage devices.
+    \item \textbf{Device Management:} Controls access to peripheral devices like printers and disks.
+    \item \textbf{Security:} Protects the system from unauthorized access and threats.
+    \item \textbf{User Interface:} Provides a way for users to interact with the system.
+\end{itemize}
+
+\section{Types of Operating Systems}
+\begin{itemize}
+    \item \textbf{Batch OS:} Executes jobs in groups without user interaction.
+    \item \textbf{Time-Sharing OS:} Allows multiple users to share resources simultaneously.
+    \item \textbf{Distributed OS:} Coordinates independent computers to act as one.
+    \item \textbf{Real-Time OS:} Ensures timely processing for critical tasks.
+    \item \textbf{Embedded OS:} Designed for devices like smartphones and IoT systems.
+    \item \textbf{Network OS:} Manages networking and data sharing between systems.
+    \item \textbf{Mobile OS:} Optimized for mobile devices with touch interfaces.
+\end{itemize}
+
+\section{Functions of an OS}
+\begin{itemize}
+    \item \textbf{Process Scheduling:} Decides the order in which processes execute.
+    \item \textbf{Memory Management:} Tracks memory usage and allocation.
+    \item \textbf{Storage Management:} Handles data storage and retrieval efficiently.
+    \item \textbf{Multitasking:} Allows multiple programs to run concurrently.
+    \item \textbf{Error Handling:} Detects and resolves hardware and software errors.
+\end{itemize}
+
+\section{Examples of Operating Systems}
+\begin{itemize}
+    \item \textbf{Windows:} Widely used for personal computers.
+    \item \textbf{Linux:} Open-source and highly customizable.
+    \item \textbf{macOS:} Known for its stability and user-friendly interface.
+    \item \textbf{Android:} Popular for mobile devices.
+    \item \textbf{iOS:} Optimized for Apple devices.
+\end{itemize}
+
+
+\chapter{Resource Management in OS}
+
+Resource management is a core function of an OS, ensuring efficient utilization of system resources. The OS manages hardware and software resources to meet user and system demands.
+
+\section{CPU Management}
+\begin{itemize}
+    \item \textbf{Process Scheduling:} Determines the execution order of processes using scheduling algorithms (e.g., FCFS, Round Robin, Priority Scheduling).
+    \item \textbf{Context Switching:} Saves and restores the state of processes to enable multitasking.
+    \item \textbf{Load Balancing:} Distributes CPU load evenly across all cores to maximize performance.
+    \item \textbf{Interrupt Handling:} Responds to hardware and software interrupts efficiently.
+\end{itemize}
+
+\section{Memory Management}
+\begin{itemize}
+    \item \textbf{Memory Allocation:} Allocates memory blocks to processes as needed.
+    \item \textbf{Virtual Memory:} Extends physical memory using disk space, enabling larger applications to run.
+    \item \textbf{Paging:} Divides memory into fixed-size pages for efficient allocation.
+    \item \textbf{Segmentation:} Divides memory into variable-sized segments based on logical divisions (e.g., code, data).
+    \item \textbf{Garbage Collection:} Frees unused memory to avoid memory leaks.
+\end{itemize}
+
+\section{Storage Management}
+\begin{itemize}
+    \item \textbf{File Allocation:} Allocates storage space for files using methods like contiguous, linked, and indexed allocation.
+    \item \textbf{Disk Scheduling:} Optimizes the order of I/O requests to reduce seek time (e.g., FCFS, SSTF).
+    \item \textbf{Caching:} Stores frequently accessed data in faster storage for quicker retrieval.
+    \item \textbf{File System Management:} Organizes files into hierarchical structures and enforces access permissions.
+\end{itemize}
+
+\section{I/O Device Management}
+\begin{itemize}
+    \item \textbf{Device Drivers:} Provides a communication layer between the OS and hardware devices.
+    \item \textbf{Device Scheduling:} Manages access to shared devices to avoid conflicts.
+    \item \textbf{Buffering:} Temporarily stores data during I/O operations to smooth differences in speed between devices.
+    \item \textbf{Spooling:} Manages devices like printers by queuing tasks for sequential execution.
+\end{itemize}
+
+\section{Network Resource Management}
+\begin{itemize}
+    \item \textbf{Bandwidth Allocation:} Manages the distribution of network bandwidth among users and applications.
+    \item \textbf{Connection Management:} Handles the setup, maintenance, and termination of network connections.
+    \item \textbf{Protocol Handling:} Implements communication protocols (e.g., TCP/IP, HTTP).
+    \item \textbf{Security:} Enforces firewalls, encryption, and user authentication for secure data transfer.
+\end{itemize}
+
+\section{Power Management}
+\begin{itemize}
+    \item \textbf{Power Scheduling:} Adjusts CPU, disk, and display activity to save energy.
+    \item \textbf{Sleep Modes:} Puts the system in low-power states when inactive.
+    \item \textbf{Battery Monitoring:} Manages power usage in portable devices like laptops and smartphones.
+\end{itemize}
+
+\section{Resource Allocation and Deadlock Management}
+\begin{itemize}
+    \item \textbf{Resource Allocation:} Ensures fair and efficient allocation of resources like CPU, memory, and devices.
+    \item \textbf{Deadlock Prevention:} Implements strategies (e.g., avoiding circular wait) to prevent resource deadlocks.
+    \item \textbf{Deadlock Detection:} Identifies deadlocks and resolves them by terminating or restarting processes.
+    \item \textbf{Priority Management:} Allocates resources based on process priority.
+\end{itemize}
+
+\section{Performance Monitoring}
+\begin{itemize}
+    \item \textbf{Logging and Auditing:} Tracks resource usage for optimization and troubleshooting.
+    \item \textbf{Performance Analysis:} Identifies bottlenecks in resource utilization.
+    \item \textbf{Load Monitoring:} Detects system overload and redistributes resources as needed.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	GITHUB
+%----------------------------------------------------------------------------------------
+
+\part {Github}
+
+\chapter{GitHub: A Collaborative Development Platform}
+
+GitHub is a web-based platform for version control and collaboration, built on Git. It enables developers to manage code repositories, track changes, and collaborate on projects effectively.
+
+\section{Key Features of GitHub}
+
+\subsection{Version Control}
+\begin{itemize}
+    \item Tracks changes in code over time.
+    \item Allows users to revert to previous versions if needed.
+    \item Facilitates branching and merging for feature development.
+\end{itemize}
+
+\subsection{Repositories}
+\begin{itemize}
+    \item Centralized storage for code, documentation, and other project files.
+    \item Can be public (open to all) or private (restricted access).
+    \item Supports cloning for local development.
+\end{itemize}
+
+\subsection{Collaboration}
+\begin{itemize}
+    \item Enables multiple developers to work on the same project.
+    \item Pull requests allow for code review and discussion.
+    \item Issues help track bugs, feature requests, and project tasks.
+\end{itemize}
+
+\subsection{Branching and Merging}
+\begin{itemize}
+    \item Branching allows independent development without affecting the main code.
+    \item Merging integrates changes from different branches into the main branch.
+    \item Supports resolving conflicts during merge operations.
+\end{itemize}
+
+\subsection{GitHub Actions}
+\begin{itemize}
+    \item Automates workflows like testing, building, and deployment.
+    \item Supports Continuous Integration/Continuous Deployment (CI/CD).
+    \item Allows custom scripts to run on specific events (e.g., push, pull request).
+\end{itemize}
+
+\subsection{Project Management}
+\begin{itemize}
+    \item Includes Kanban-style boards for tracking tasks.
+    \item Milestones group issues into specific goals or phases.
+    \item Labels categorize issues and pull requests for better organization.
+\end{itemize}
+
+\subsection{Code Hosting and Sharing}
+\begin{itemize}
+    \item Facilitates sharing projects with collaborators or the public.
+    \item Supports binary files, images, and markdown documentation.
+    \item Provides easy integration with third-party tools.
+\end{itemize}
+
+\subsection{Community Building}
+\begin{itemize}
+    \item Enables collaboration through forks and pull requests.
+    \item Supports discussions and wikis for project documentation.
+    \item Encourages open-source contributions to public repositories.
+\end{itemize}
+
+\subsection{Security and Access Control}
+\begin{itemize}
+    \item Offers role-based access controls for teams and collaborators.
+    \item Scans code for vulnerabilities using Dependabot.
+    \item Allows branch protection to enforce review policies.
+\end{itemize}
+
+\subsection{GitHub Pages}
+\begin{itemize}
+    \item Hosts static websites directly from repositories.
+    \item Supports custom domains and Jekyll-based static site generation.
+    \item Ideal for documentation, portfolios, and project showcases.
+\end{itemize}
+
+\subsection{Integration and API Support}
+\begin{itemize}
+    \item Integrates with tools like Slack, Trello, and Jenkins.
+    \item Provides APIs for custom application development.
+    \item Supports webhooks to trigger actions on external systems.
+\end{itemize}
+
+\section{Conclusion}
+GitHub simplifies collaborative development and project management with its extensive features. It is widely used for both open-source and enterprise projects, making it a cornerstone of modern software development.
+
+
+\chapter{Github Command Usage}
+\section{Github clone a Website}
+\begin{enumerate}
+    \item Create a repo in github or select a already created rep
+    \item Copy the link in the repo
+    \item git clone https://github.com/JithuMorrison/repo\_name
+\end{enumerate}
+
+
+\section{Github commands to execute to push a file in cloud repo first time}
+\begin{enumerate}
+    \item Create a folder in pc with files eg.) create a folder using vite@latest webname - React.js
+    \item Create a repo in github
+    \item Go into the folder 
+    \item git init
+    \item git remote add origin https://github.com/JithuMorrison/cloud\_repo\_name
+    \item git add .
+    \item git commit -m "first commit"  
+    \item git branch
+    \item git branch -m main
+    \item git push -u origin main
+\end{enumerate}
+
+\section{Github commands to execute to push a file in cloud repo second or above}
+\begin{enumerate}
+    \item git add .
+    \item git commit -m "commit message"
+    \item git push -u origin main
+\end{enumerate}
+
+\section{Github commands to deploy react code for first time}
+\begin{enumerate}
+    \item git init [No need again if already done once]
+    \item git remote add origin https://github.com/JithuMorrison/cloud\_repo\_name [Only once]
+    \item npm install --save gh-pages   -->   [In terminal]
+    \item "homepage": "https://jithumorrison.github.io/repo\_name", --> [ Fisrt line in package.json after "\{" ] \\
+    \item "scripts": \{\\
+  "predeploy": "npm run build",\\
+  "deploy": "gh-pages -d build"\\
+\} --> [In package.json] 
+    \item export default defineConfig(\{\\
+  plugins: [react()],\\
+  base: '/repo\_name/', --Start with slash\\
+\}); --> [In vite.config.js] 
+    \item npm run build
+    \item mv dist build
+    \item npm run deploy
+\end{enumerate}
+
+\section{Github commands to deploy react code}
+\begin{enumerate}
+    \item delete previous build
+    \item npm run build
+    \item mv dist build
+    \item npm run deploy
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
